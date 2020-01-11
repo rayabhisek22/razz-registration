@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+
+</head>
+<body>
+
+	
+			<div id="event" style="position: relative;">
+				<button onclick="fun()" style="padding: 5px;border-radius: 35px;background-color: rgb(0,0,100);color:white">Events</button> 
+					<div id="menu" style="height: 350px; width: 200px; border: 0px solid black; justify-content: center; align-items: center; border-radius: 25px; box-shadow: 5px 10px 8px #888888; padding: 10px 10px; font-size: 20px;">
+						<br>
+						<input type="checkbox" name="events[]" value="Quiz">Quiz<br>
+						<input type="checkbox" name="events[]" value="Treassure Hunt">Treassure Hunt<br>
+						<input type="checkbox" name="events[]" value="Teen Rowdies">Teen Rowdies<br>
+						<input type="checkbox" name="events[]" value="Halla Bol">Halla Bol<br>
+						<input type="checkbox" name="events[]" value="Raaga">Raaga<br>
+						<input type="checkbox" name="events[]" value="Nrityangana">Nrityangana<br>
+						<input type="checkbox" name="events[]" value="Yuvdhwani">Yuvdhwani<br>
+						<input type="checkbox" name="events[]" value="Act Pro">Act Pro<br>
+						<input type="checkbox" name="events[]" value="Brain Jam">Brain Jam<br>
+						<input type="checkbox" name="events[]" value="T-shirt Design (prelims LOGO)">T-shirt Design (prelims LOGO)<br>
+						<input type="checkbox" name="events[]" value="Counter-Strike">Counter-Strike<br>
+						<input type="checkbox" name="events[]" value="FIFA">FIFA<br>
+				</div>	
+			</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#menu").hide();
+		  $("button").click(function(){
+		    $("#menu").toggle();
+		  });
+		});
+	</script>
+</body>
+</html>
