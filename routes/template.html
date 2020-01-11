@@ -3,6 +3,7 @@
     <head>
         <mate charest="utf-8" />
         <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
 
         <title>Registration</title>
@@ -10,7 +11,7 @@
     <body><br><br>
         <h1><i><u>RAZZMATAZZ</u></i></h1>
         
-        <h2 style="text-align: center;color: #027a00">Thanks for registering to Razzmatazz.</h2><br>
+        <h2 style="text-align: center;margin:auto;color: #027a00">Thanks for registering to Razzmatazz.</h2><br>
         <div style="position: relative; left:10%; font-size: 1.4em"><h3><u>Details of the event:</u></h3>
             <div style="position: relative; left:10%;">
                 
@@ -57,7 +58,7 @@
             </tr>
             <tr>
                 <th>Events</th>
-                <td style="max-height: 300px;max-width: 250px">
+                <td style=" overflow-x: auto">
                     {{#each student.events}}
                         <span>{{this}}, </span>
                     {{/each}}
@@ -66,7 +67,7 @@
         </table>
         </div><br><br>
 
-        <div style="position: relative; left:10%; font-size: 1.1em">
+        <div id="rules" style="margin: auto; font-size: 1.2em">
             <h3 style="color: #f00a0a">Rules :</h3>
             <ol>
                 <li>Students must be present in their school uniform and must carry ID cards / almanacs issued by their school.</li>
@@ -79,12 +80,14 @@
         </diV>
         <div>
             <br><br><br><br><br>
-            <span style="position: relative; left:10%; font-size: 1.3em;">Student's signature</span>
-            <span style="position: relative; left:70%; font-size: 1.3em;">Parent's signature</span>
+            <span class="student">Student's signature</span>
+            <span class="parent">Parent's signature</span>
         </div><br>
 
-        <div style="position:relative;left:20%;color: red;font-size: 1.4em"><b>*** You must come with a printed copy of this page on both days (i.e. print 2 copies) ***</b></div>
+        <div id="warning" style="position:relative;color: red;font-size: 1.3em"><b>*** You must come with a printed copy of this page on both days (i.e. print 2 copies) ***</b></div>
     </body>
+
+
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Exo:700i&display=swap');
        h1{
@@ -102,14 +105,48 @@
             padding-left: 30px;
             padding-right: 30px;
             text-align: left;
+            overflow-x: auto;
         }
         td{
             width: 400px
         }
         table{
-            position: relative;
-            left: 20%;
+            /*position: relative;*/
+            margin: auto;
             border-collapse: collapse;
+        }
+        .student{
+            position: relative; left:10%; font-size: 1.3em;
+        }
+        .parent{
+            position: relative; left:70%; font-size: 1.3em;
+        }
+        #warning{
+            text-align: center;
+        }
+        #rules{
+            position: relative;
+            left:20%;
+        }
+        @media screen and (max-width: 1100px) {
+            table{
+
+                max-width: 100%
+            }
+            td{
+                max-width: 100%
+            }
+            .student{
+                font-size: 1.2em
+            }
+            .parent{
+                font-size: 1.2em;
+                left:35%;
+            }
+            #rules{
+                left: 0%
+            }
+            
         }
     </style>
 </html>

@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>New Registration</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./styles/registration.css">
+	<script type="text/javascript" src="./js/registration.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -39,7 +41,7 @@
    <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Mobile</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" name="student[mobile]" placeholder="mobile" required>
+      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" name="student[mobile]" placeholder="+91-xxxxxxxxxx" required>
     </div>
   </div>
       <div class="form-group row">
@@ -57,13 +59,13 @@
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Parent Mobile Number</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" name="student[parent_no]" placeholder="parent mobile number" required>
+      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" name="student[parent_no]" placeholder="+91-xxxxxxxxxx" required>
     </div>
   </div>
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Class</label>
     <div class="col-sm-7">
-      <select class="custom-select custom-select-lg mb-3" name="student[class]">
+      <select class="custom-select custom-select-lg mb-3" name="student[class]" required>
 	<option selected>Select Class</option>
 	<option value="5">5</option>
 	<option value="6">6</option>
@@ -81,32 +83,39 @@
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Events</label>
     <div class="col-sm-7">
-     <div id="event">
-	<button onclick="fun()" class="btn btn-outline-primary btn-lg ">Select Events</button> 
-		<div id="menu" style="background-color:white;margin-top:-83%;text-align:left;overflow-y: auto;height: 300px; width:100%; border: 0.5px solid black; justify-content: center; align-items: center; padding: 10px 10px; font-size: 20px;">
-			<br>
-			<input type="checkbox" name="events[]" value="Quiz">Quiz<br>
-			<input type="checkbox" name="events[]" value="Treassure Hunt">Treassure Hunt<br>
-			<input type="checkbox" name="events[]" value="Teen Rowdies">Teen Rowdies<br>
-			<input type="checkbox" name="events[]" value="Halla Bol">Halla Bol<br>
-			<input type="checkbox" name="events[]" value="Raaga">Raaga<br>
-			<input type="checkbox" name="events[]" value="Nrityangana">Nrityangana<br>
-			<input type="checkbox" name="events[]" value="Yuvdhwani">Yuvdhwani<br>
-			<input type="checkbox" name="events[]" value="Act Pro">Act Pro<br>
-			<input type="checkbox" name="events[]" value="Brain Jam">Brain Jam<br>
-			<input type="checkbox" name="events[]" value="Tee-Shart (prelims LOGO)">Tee-Shart Design (prelims LOGO)<br>
-			<input type="checkbox" name="events[]" value="Counter-Strike-Go">Counter-Strike-Go<br>
-			<input type="checkbox" name="events[]" value="FIFA">FIFA<br>
-			<input type="checkbox" name="events[]" value="Word-Comabt">Word-Comabt<br>
-			<input type="checkbox" name="events[]" value="Vocaphilia">Vocaphilia<br>
-			<input type="checkbox" name="events[]" value="Need-For-Speed">Need-For-Speed<br>
-			<input type="checkbox" name="events[]" value="Tasveer">Tasveer<br>
-			<input type="checkbox" name="events[]" value="Sketch-me-if-you-can">Sketch-me-if-you-can<br>
-			<input type="checkbox" name="events[]" value="Alfaaz">Alfaaz<br>
-	</div>	
-  </div>
+
+
+     <div class="multiselect">
+	    <div class="selectBox" onclick="showCheckboxes()">
+	      <select style="position: relative;" class="custom-select custom-select-lg mb-3" name="student[class]">
+	        <option>Select multiple events</option>
+	      </select required>
+	      <div class="overSelect"></div>
+	    </div>
+	    <div id="checkboxes" style="">
+	      	<label for="1"><input id="1" type="checkbox" name="events[]" value="Quiz">Quiz</label>
+			<label for="2"><input id="2" type="checkbox" name="events[]" value="Treassure Hunt">Treassure Hunt</label>
+			<label for="3"><input id="3" type="checkbox" name="events[]" value="Teen Rowdies">Teen Rowdies</label>
+			<label for="4"><input id="4" type="checkbox" name="events[]" value="Halla Bol">Halla Bol</label>
+			<label for="5"><input id="5" type="checkbox" name="events[]" value="Raaga">Raaga</label>
+			<label for="6"><input id="6" type="checkbox" name="events[]" value="Nrityangana">Nrityangana</label>
+			<label for="7"><input id="7" type="checkbox" name="events[]" value="Yuvdhwani">Yuvdhwani</label>
+			<label for="8"><input id="8" type="checkbox" name="events[]" value="Act Pro">Act Pro</label>
+			<label for="9"><input id="9" type="checkbox" name="events[]" value="Brain Jam">Brain Jam</label>
+			<label for="10"><input id="10" type="checkbox" name="events[]" value="Tee-Shart (prelims LOGO)">Tee-Shart Design (prelims LOGO)</label>
+			<label for="11"><input id="11" type="checkbox" name="events[]" value="Counter-Strike-Go">Counter-Strike-Go</label>
+			<label for="12"><input id="12" type="checkbox" name="events[]" value="FIFA">FIFA</label>
+			<label for="13"><input id="13" type="checkbox" name="events[]" value="Word-Comabt">Word-Comabt</label>
+			<label for="14"><input id="14" type="checkbox" name="events[]" value="Vocaphilia">Vocaphilia</label>
+			<label for="15"><input id="15" type="checkbox" name="events[]" value="Need-For-Speed">Need-For-Speed</label>
+			<label for="16"><input id="16" type="checkbox" name="events[]" value="Tasveer">Tasveer</label>
+			<label for="17"><input id="17" type="checkbox" name="events[]" value="Sketch-me-if-you-can">Sketch-me-if-you-can</label>
+			<label for="18"><input id="18" type="checkbox" name="events[]" value="Alfaaz">Alfaaz</label><br><br><br>
+
+	    </div>
+	  </div>
     </div>
-  </div><br>
+  </div>
 
 
 	<div class="col-auto">
@@ -117,23 +126,6 @@
 	</div>
 
 </div></div>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#menu").hide();
-		  $("button").click(function(){
-		    $("#menu").toggle();
-		  });
-		});
-	</script>
-
-
-
-
 	
 </body>
 </html>
-
