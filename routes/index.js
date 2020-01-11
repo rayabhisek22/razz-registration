@@ -1,7 +1,9 @@
 var express = require('express')
 var router = express.Router()
 
-
+router.get("/",(req,res)=>{
+	res.redirect("/registration")
+})
 //Admin Routes
 var authRoutes = require('./authRoutes');
 router.use("/admin",authRoutes);
