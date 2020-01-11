@@ -13,7 +13,7 @@ var options = {
         format: "A3",
         orientation: "portrait",
         header: {
-            height: "45mm",
+            height: "25mm",
         },
         "footer": {
             "height": "28mm"            
