@@ -12,6 +12,12 @@ var html = fs.readFileSync(__dirname+'/template.html', 'utf8');
 var options = {
         format: "A3",
         orientation: "portrait",
+        header: {
+            height: "45mm",
+        },
+        "footer": {
+            "height": "28mm"            
+        }
     };
 
 
@@ -54,19 +60,19 @@ function fun1(req,res,next){
 	newStudent.save((err,s)=>{
 		if(err) console.log(err)
 		else{
-			console.log(s)
+			
 		} 
 	})
-	console.log("AA")
+	
 
 	//Updating count
 	newCount.count++
 	newCount.save((err,a)=>{
 		if(err) console.log(err)
-		else console.log(a)
+		else {}
 	})
 
-	console.log("AAA")
+	
 	pdf.create(document, options)
 	    .then(res1 => {
 	    	console.log(res1)
