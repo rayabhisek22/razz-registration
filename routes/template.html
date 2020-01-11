@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charest="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+
+
+        <title>Registration</title>
+    </head>
+    <body><br><br>
+        <h1><i><u>RAZZMATAZZ</u></i></h1>
+        
+        <h2 style="text-align: center;color: #027a00">Thanks for registering to Razzmatazz.</h2><br>
+        <div style="position: relative; left:10%; font-size: 1.4em"><h3><u>Details of the event:</u></h3>
+            <div style="position: relative; left:10%;">
+                
+                <p><b>Venue: </b>New Gallery, Opposite SBI Branch, NIT Silchar</p>
+                <p><b>Dates: </b>14th and 15th February, 2020</p>
+                <p><b>Registration time: </b>7-10 am</p>
+                <p>* Registration will be <b>closed</b> by 10:30 am. No more will be entertained after that. *</p>
+            </div></div>            
+        <br>
+        <h2 style="position: relative; left:10%;font-size: 1.4em;"><u>Student Details:</u></h2><br>
+        <div>
+        <table style="border: 1px solid black">
+            <tr>
+                <th>Name</th>
+                <td>{{student.name}}</td>
+            </tr>
+            <tr>
+                <th>Razzmatazz ID:</th>
+                <td>{{student.RID}}</td>
+            </tr>
+            <tr>
+                <th>School</th>
+                <td>{{student.school}}</td>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td>{{student.class}}</td>
+            </tr>
+            <tr>
+                <th>Mobile number</th>
+                <td>{{student.mobile}}</td>
+            </tr>
+            <tr>
+                <th>Email ID</th>
+                <td>{{student.email}}</td>
+            </tr>
+            <tr>
+                <th>Parent Name</th>
+                <td>{{student.parent_name}}</td>
+            </tr>
+            <tr>
+                <th>Parent Number</th>
+                <td>{{student.parent_no}}</td>
+            </tr>
+            <tr>
+                <th>Events</th>
+                <td style="max-height: 300px;max-width: 250px">
+                    {{#each student.events}}
+                        <span>{{this}}, </span>
+                    {{/each}}
+                </td>
+            </tr>
+        </table>
+        </div><br><br>
+
+        <div style="position: relative; left:10%; font-size: 1.4em">
+            <h3 style="color: #f00a0a">Rules :</h3>
+            <ol>
+                <li>Students must be present in their school uniform and must carry ID cards / almanacs issued by their school.</li>
+                <li>Students in school uniform cannot perform in any other events other than Razzmataazz.</li>
+                <li>Students are not allowed to leave the venue till the end of all events for that particular day without any guardian. <br>Strict actions will be taken if caught. </li>
+                <li>Student parking will <b>not</b> be given. </li>
+                <li>Parents will be provided with sitting place inside the venue. </li>
+                <li>Student found doing any kind of misbehaviour will be strictly reported to the school authorities.</li>
+            </ol>
+        </diV>
+        <div>
+            <br><br><br><br><br><br><br><br>
+            <span style="position: relative; left:10%; font-size: 1.3em;">Student's signature</span>
+            <span style="position: relative; left:70%; font-size: 1.3em;">Parent's signature</span>
+        </div><br><br><br>
+
+        <div style="position:relative;left:20%;color: red;font-size: 1.4em"><b>*** You must come with a printed copy of this page on both days (i.e. print 2 copies) ***</b></div>
+    </body>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Exo:700i&display=swap');
+       h1{
+            font-family: 'Exo', sans-serif;
+            color: rgb(100,100,140);
+            font-size:50px;
+            text-align: center;
+        }
+        tr{
+            font-size: 25px;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: left;
+        }
+        td{
+            width: 600px
+        }
+        table{
+            position: relative;
+            left: 20%;
+            border-collapse: collapse;
+        }
+    </style>
+</html>

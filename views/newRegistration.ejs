@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Registration</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./styles/registration.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<h2>New Registration</h2>
+	<form action="/registration" method="post" class="text-center">
+
+		<input type="text" name="student[name]" placeholder="name" required> <br>
+		<input type="text" name="student[school]" placeholder="school" required> <br>
+		<input type="text" name="student[mobile]" placeholder="mobile" required> <br>
+		<input type="email" name="student[email]" placeholder="email"> <br>
+		<input type="text" name="student[parent_name]" placeholder="parent name" required> <br>
+		<input type="text" name="student[parent_no]" placeholder="parent mobile number" required> <br>
+		Class :<br>
+		<select name="student[class]" required="">
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select>
+		Select Events:
+		
+		<!--<div class="multiselect" class="text-center">
+		    <div class="selectBox text-center" onclick="showCheckboxes()">
+		      <select>
+		        <option>Select Events</option>
+		      </select>
+		      <div class="overSelect"></div>
+		    </div>
+		    <div id="checkboxes" class="text-center">
+		      <label for="Quiz">
+		        <input type="checkbox" id="Quiz" name="events[]" value="Quiz" />Quiz</label>
+		      <label for="Treassure Hunt">
+		        <input type="checkbox" id="Treassure Hunt" name="events[]" value="Treassure Hunt" />Treassure Hunt</label>
+		      <label for="Teen Rowdies">
+		        <input type="checkbox" id="Teen Rowdies" name="events[]" value="Teen Rowdies"/>Teen Rowdies</label>
+		      <label for="Halla Bol">
+		        <input type="checkbox" id="Halla Bol" name="events[]" value="Halla Bol"/>Halla Bol</label>
+		      <label for="Raaga">
+		        <input type="checkbox" id="Raaga" name="events[]" value="Raaga"/>Raaga</label>
+		      <label for="Nrityangana">
+		        <input type="checkbox" id="Nrityangana" name="events[]" value="Nrityangana"/>Nrityangana</label>
+		      <label for="Yuvdhwani">
+		        <input type="checkbox" id="Yuvdhwani" name="events[]" value="Yuvdhwani"/>Yuvdhwani</label>
+		      <label for="Act Pro">
+		        <input type="checkbox" id="Act Pro" name="events[]" value="Act Pro"/>Act Pro</label>
+		      <label for="Brain Jam">
+		        <input type="checkbox" id="Brain Jam" name="events[]" value="Brain Jam"/>Brain Jam</label>
+		      <label for="T-shirt Design (prelims LOGO Design)">
+		        <input type="checkbox" id="T-shirt Design (prelims LOGO Design)" name="events[]" value="T-shirt Design (prelims LOGO Design)"/>T-shirt Design (prelims LOGO Design)</label>
+		      <label for="Counter Strike">
+		        <input type="checkbox" id="Counter Strike" name="events[]" value="Counter Strike"/>Counter Strike</label>
+		      <label for="FIFA">
+		        <input type="checkbox" id="FIFA" name="events[]" value="FIFA"/>FIFA</label>
+		     
+		    </div>
+		  </div>-->
+
+		  <input type="submit" name="submit">
+
+	</form>
+
+
+</body>
+</html>
+
+<!--
+	<div id="checkbox-dropdown-container">
+	<form id="fromCustomSelect" name="fromCustomSelect" action=""
+		method="post">
+		<div>
+			<?php 
+				    if(!empty($_POST["toys"])) { 
+				    $selectedValues = implode(", ", $_POST["toys"]);
+				?>
+			<div class="result-list">
+				<div class="result-list-heading">The selected options are:</div>
+				<div>
+					<?php echo $selectedValues; ?>
+				</div>
+			</div>
+			<?php 
+				    } 
+				?>
+			<div class="custom-select" id="custom-select">Select Multi
+				Options...</div>
+			<div id="custom-select-option-box">
+				<div class="custom-select-option">
+					<input onchange="toggleFillColor(this);"
+						class="custom-select-option-checkbox" type="checkbox"
+						name="toys[]" value="Fidget Spinner"> Fidget Spinner
+				</div>
+				<div class="custom-select-option">
+					<input onchange="toggleFillColor(this);"
+						class="custom-select-option-checkbox" type="checkbox"
+						name="toys[]" value="Lego Bricks"> Lego Bricks
+				</div>
+				<div class="custom-select-option">
+					<input onchange="toggleFillColor(this);"
+						class="custom-select-option-checkbox" type="checkbox"
+						name="toys[]" value="YoYo"> YoYo
+				</div>
+				<div class="custom-select-option">
+					<input onchange="toggleFillColor(this);"
+						class="custom-select-option-checkbox" type="checkbox"
+						name="toys[]" value="Barbie Doll"> Barbie Doll
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="search btn">Submit</button>
+	</form>
+</div>
+
+-->
