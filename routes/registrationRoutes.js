@@ -39,7 +39,7 @@ router.get("/",(req,res)=>{
 })
 
 var student1
-function fun1(req,res,next){
+async function fun1(req,res,next){
 	student1 = req.body.student
 	student1.events = req.body.events
 
@@ -57,7 +57,7 @@ function fun1(req,res,next){
 
 	//Updating student
 	var newStudent = new Student(student1)
-	newStudent.save((err,s)=>{
+	await newStudent.save((err,s)=>{
 		if(err) console.log(err)
 		else{
 			
@@ -67,13 +67,13 @@ function fun1(req,res,next){
 
 	//Updating count
 	newCount.count++
-	newCount.save((err,a)=>{
+	await newCount.save((err,a)=>{
 		if(err) console.log(err)
 		else {}
 	})
 
 	
-	pdf.create(document, options)
+	await pdf.create(document, options)
 	    .then(res1 => {
 	    	console.log(res1)
 	    	next()
