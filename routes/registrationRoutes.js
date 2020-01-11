@@ -12,12 +12,6 @@ var html = fs.readFileSync(__dirname+'/template.html', 'utf8');
 var options = {
         format: "A3",
         orientation: "portrait",
-        "footer": {
-            "contents": {
-            first: 'Cover page',
-            2: 'Second page', // Any page number is working. 1-based index
-            last: 'Last Page'
-        }}
     };
 
 
@@ -41,7 +35,7 @@ router.get("/",(req,res)=>{
 var student1
 function fun1(req,res,next){
 	student1 = req.body.student
-	//student1.events = req.body.events
+	student1.events = req.body.events
 
 	student1.RID = "#RAZZ_ID"+(newCount.count+1).toString(10)
 	
