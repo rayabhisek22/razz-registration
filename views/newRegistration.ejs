@@ -19,12 +19,12 @@
 	<hr style="width: 50%;margin-top:0px;margin-bottom: 0px">
 <div class="card">
 <div class="row" id="row">
-	<div class="col-sm-3" id="menu-bg">
+	<div class="col-sm-3" id="menu-bg" style="border-radius: 20px 0 0 20px">
 		
 	</div>
 	<div class="col-sm-9" id="menu-as">
 
-<form action="/registration" method="post">
+<form id="myForm" action="/registration" method="post">
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Name</label>
     <div class="col-sm-7">
@@ -34,7 +34,7 @@
   <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">School</label>
     <div class="col-sm-7">
-      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" name="student[school]" placeholder="school" required>
+      <input type="text" class="school form-control form-control-lg" id="colFormLabelLg" name="student[school]" placeholder="school" required>
     </div>
   </div>
 
@@ -103,11 +103,8 @@
 			<label for="8"><input id="8" type="checkbox" name="events[]" value="Act Pro">Act Pro</label>
 			<label for="9"><input id="9" type="checkbox" name="events[]" value="Brain Jam">Brain Jam</label>
 			<label for="10"><input id="10" type="checkbox" name="events[]" value="Tee-Shart (prelims LOGO)">Tee-Shart Design (prelims LOGO)</label>
-			<label for="11"><input id="11" type="checkbox" name="events[]" value="Counter-Strike-Go">Counter-Strike-Go</label>
-			<label for="12"><input id="12" type="checkbox" name="events[]" value="FIFA">FIFA</label>
 			<label for="13"><input id="13" type="checkbox" name="events[]" value="Word-Comabt">Word-Comabt</label>
 			<label for="14"><input id="14" type="checkbox" name="events[]" value="Vocaphilia">Vocaphilia</label>
-			<label for="15"><input id="15" type="checkbox" name="events[]" value="Need-For-Speed">Need-For-Speed</label>
 			<label for="16"><input id="16" type="checkbox" name="events[]" value="Tasveer">Tasveer</label>
 			<label for="17"><input id="17" type="checkbox" name="events[]" value="Sketch-me-if-you-can">Sketch-me-if-you-can</label>
 			<label for="18"><input id="18" type="checkbox" name="events[]" value="Alfaaz">Alfaaz</label><br><br><br>

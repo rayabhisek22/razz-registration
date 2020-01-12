@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Panel</title>
+</head>
+<body>
+	<h1 style="text-align: center">Admin Panel</h1>
+	<h2 style="text-align: center">Students Registered</h2>
+	<table>
+		<tr>
+			<th>Sl. no.</th>
+			<th>Name</th>
+			<th>Class</th>
+			<th>Razz ID</th>
+			<th>School</th>
+			<th>Events</th>
+			<th>Parent Name</th>
+			<th>Parent Number</th>
+		</tr>
+		<% var i=0;student.forEach(s=>{ %>
+			<tr>
+				<td><%= i %></td>
+				<td><%= s.name %></td>
+				<td><%= s.class %></td>
+				<td><%= s.RID %></td>
+				<td><%= s.school %></td>
+				<td><%= s.events %></td>
+				<td><%= s.parent_name %></td>
+				<td><%= s.parent_no %></td>
+			</tr>
+		<% ++i;}) %>
+		</ol>
+	</table>
+</body>
+<style type="text/css">
+	table{
+		border:1px solid black;
+		padding: 10px;
+		border-collapse: collapse;
+		margin: auto
+	}
+	tr,td,th{
+		border:1px solid black;
+		padding: 10px;
+		border-collapse: collapse;
+	}
+</style>
+</html>
