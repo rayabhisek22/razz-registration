@@ -29,10 +29,13 @@ var indexRoutes = require("./routes/index");
 app.use(indexRoutes);
 
 //Application listen at port 8080
-var port = process.env.PORT;
+var port = process.env.PORT|8080;
 app.listen(port,(err)=>{
 	if(err)
 		console.log(err);
 	else
 		console.log("Server started at port "+port);
 }) 
+
+
+
