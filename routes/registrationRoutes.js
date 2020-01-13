@@ -45,7 +45,7 @@ async function fun1(req,res,next){
 
 	student1.RID = "#RAZZ_ID"+(newCount.count+1).toString(10)
 	
-	if(student1.school=="NIT Silchar" || student1.school=="National Institue of Technology Silchar" || student1.school=="NITS"){
+	if(student1.school=="NIT Silchar" || student1.school=="National Institue of Technology Silchar" || student1.school=="NITS" student1.school=="NIT S" || student1.school=="NIT"){
 		res.send("NIT Silchar students not allowed in registration")
 		return
 	}

@@ -3,54 +3,50 @@
   height: 50px;
 }
 
-.col-sm {
-  width: 800px;
+.col-sm-4 {
+  padding-left:7% ;
 }
 
-form {
-  margin: 50px auto;
-}
 
 body{
     justify-content: center;
     align-items: center;
-
 }
+
 .card {
   width: 1000px;
-  height: 700px;
+  height: 630px;
   margin: 50px 250px;
+  margin-top: 20px;
   border: 0.5px solid black;
+  padding-top: 1%;
+  border-radius: 1%;
+  padding-right: -2%;
+  opacity: 0.85;
 }
 
 .custom-select{
   width: 100%
 }
 
-#menu-bg{
-  background-image: url("../images/form/Razz.jpg");
-  
-  background-size: 100% 100%;
-  height: 700px;
+body{
+  background-image: url("../images/form/1.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
 
 #row{
-  height: 700px;
+  height: 500px;
 }
 #menu-as{
-  height: 700px;
+  height: 500px;
 }
-
-
-
-
 
 
 .multiselect {
   width: 200px;
 }
-
 
 
 .selectBox select {
@@ -67,7 +63,7 @@ body{
 
 #checkboxes {
   display: none;
-  background-color:white;margin-top:-75%;text-align:left;overflow-y: auto;height: 295px; width:100%; border: 1px solid red; justify-content: center; align-items: center; padding: 10px 10px; font-size: 20px;
+  background-color:white;margin-top:-60%;text-align:left;overflow-y: auto;height: 290px; width:100%; border: 1px solid red; justify-content: center; align-items: center; padding: 10px 10px; font-size: 20px;
 }
 
 #checkboxes label {
@@ -83,10 +79,20 @@ body{
     width: 100%;
     margin-top: 0;
   }
+  .header1{
+    font-size: 1.2em;
+  }
+  body{
+    background-repeat: repeat; 
+  }
   .card{
-    width: 300px;
+    width: 310px;
     margin: auto;
     border: 0px solid black;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 1000px;
   }
   #menu-bg{
     height: 0px
