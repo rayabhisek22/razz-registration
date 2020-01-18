@@ -93,6 +93,10 @@ async function fun1(req,res,next){
 
 router.post("/",fun1,(req,res)=>{
 	console.log("I'm done")
+	res.redirect("/registration/xyz")
+})
+
+router.get("/xyz",(req,res)=>{
 	res.redirect("/success")
 })
 
