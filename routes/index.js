@@ -2,10 +2,11 @@ var express = require('express')
 var router = express.Router()
 
 router.get("/",(req,res)=>{
-	res.redirect("/registration")
+	res.send("Registration will start soon")
+	//res.redirect("/registration")
 })
 //Admin Routes
-var authRoutes = require('./authRoutes');
+/*var authRoutes = require('./authRoutes');
 router.use("/admin",authRoutes);
 
 //Registration Routes
@@ -20,7 +21,7 @@ router.get("/success",(req,res)=>{
 //download route
 router.get("/download",(req,res)=>{
 	res.download(__dirname+"/registration.pdf")
-})
+})*/
 
 
 module.exports = router
