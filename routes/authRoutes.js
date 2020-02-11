@@ -33,6 +33,16 @@ router.get("/acc",isLoggedIn,(req,res)=>{
 	})
 })
 
+//form will be there
+router.get("/update",isLoggedIn,(req,res)=>{
+
+})
+
+//update the model with the data
+router.post("/update",isLoggedIn,(req,res)=>{
+
+})
+
 //login
 router.get("/login",(req,res)=>{
 	res.render("adminLogin");

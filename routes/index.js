@@ -23,6 +23,10 @@ router.get("/download",(req,res)=>{
 	res.download(__dirname+"/registration.pdf")
 })
 
+//winner page
+router.get("/winner",(req,res)=>{
+	res.render("winner")
+})
 
 module.exports = router
 
